@@ -4,26 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace triangulo_1
+namespace triangulo_2
 {
     class Program
     {
         static void Main(string[] args)
         {
 
-            Console.WriteLine("ingrese el valor de Y");
-            double Y = double.Parse(Console.ReadLine());
-            Console.WriteLine("ingrese el valor de Z");
-            double Z = double.Parse(Console.ReadLine());
-            double T = Math.Sqrt((Y * Y) + (Z * Z));
-            double C1 = Math.Asin(Z/T);
-            double C = C1 * (180 / Math.PI);
-            double A1 = Math.Asin(Y / T);
-            double A = A1 * (180 / Math.PI);
+            Console.WriteLine("ingrese el valor de T");
+            double T = double.Parse(Console.ReadLine());
+            Console.WriteLine("ingrese el valor de A");
+            double A1 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine(" el valor de C : " + C);
-            Console.WriteLine(" el valor de T : " + T);
-            Console.WriteLine(" el valor de A : " + A);
+            double A = (Math.PI / 180) * A1;
+            double C1 = 90 - A1;
+            double C = (Math.PI / 180) * C1;
+            double Z = (Math.Sin(C) * T);
+            double Y = (Math.Sin(A) * T);
+
+            Console.WriteLine(" el valor de C : " + C1);
+            Console.WriteLine(" el valor de Z : " + Z);
+            Console.WriteLine(" el valor de Y : " + Y);
+
         }
     }
 }
