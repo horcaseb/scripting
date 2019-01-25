@@ -4,27 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace triangulo_2
+namespace triangulo_3
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("ingrese el valor de C");
+            double C1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("ingrese el valor de Z");
+            double Z = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("ingrese el valor de T");
-            double T = double.Parse(Console.ReadLine());
-            Console.WriteLine("ingrese el valor de A");
-            double A1 = double.Parse(Console.ReadLine());
+            double A1 = 90 - C1;
+            double A = A1 * (Math.PI / 180);
+            double C = C1 * (Math.PI / 180);
+            double T = (Z / Math.Sin(C));
+            double Y = Math.Sin(A) * (T);
 
-            double A = (Math.PI / 180) * A1;
-            double C1 = 90 - A1;
-            double C = (Math.PI / 180) * C1;
-            double Z = (Math.Sin(C) * T);
-            double Y = (Math.Sin(A) * T);
+            Console.WriteLine(" A vale: " + A1);
+            Console.WriteLine(" T vale: " + T);
+            Console.WriteLine(" Y vale: " + Y);
 
-            Console.WriteLine(" el valor de C : " + C1);
-            Console.WriteLine(" el valor de Z : " + Z);
-            Console.WriteLine(" el valor de Y : " + Y);
 
         }
     }
